@@ -4,6 +4,7 @@ Welcome to my technical portfolio.
 This space documents selected penetration testing exercises, vulnerability research, and exploitation walkthroughs performed in controlled environments such as **Hack The Box**.
 
 Each write-up aims to demonstrate:
+
 - A **methodical approach** to vulnerability identification and exploitation  
 - **Clear documentation** of tools, reasoning, and attack paths  
 - **Actionable remediation guidance** when applicable  
