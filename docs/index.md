@@ -13,7 +13,7 @@ Each write-up aims to demonstrate:
 
 ## 📂 Categories
 
-- **[Machines](./machines/hackthebox.md)**  
+- **[Machines](./machines/machines.md)**  
   Step-by-step penetration test walkthroughs organized by difficulty and platform.
 
 - **[Research](./research/research.md)**  
