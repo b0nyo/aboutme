@@ -1,4 +1,4 @@
-# b0nyo | Penetration Testing Write-Ups & Research
+# Penetration Testing Write-Ups & Research
 
 Welcome to my technical portfolio.  
 This space documents selected penetration testing exercises, vulnerability research, and exploitation walkthroughs performed in controlled environments such as **Hack The Box**.
@@ -11,16 +11,13 @@ Each write-up aims to demonstrate:
 
 ---
 
-## 🧩 Categories
+## 📂 Categories
 
-- **[Machines](./Machines/)**  
+- **[Machines](./machines/hackthebox.md)**  
   Step-by-step penetration test walkthroughs organized by difficulty and platform.
 
-- **[Findings](./Findings/)**  
+- **[Research](./research/research.md)**  
   Technical notes on interesting vulnerabilities, configurations, or security mispractices.
-
-- **[Guides](./Guides/)**  
-  Practical how-tos and short references for common pentesting workflows and tool usage.
 
 ---
 
