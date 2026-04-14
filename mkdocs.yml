@@ -2,14 +2,20 @@ site_name: b0nyo
 theme:
   name: material
   palette:
-    # Tema oscuro predeterminado
-    - scheme: default
+    - scheme: slate # Usar slate como default suele ser mejor para el look "Dark"
+      primary: red
+      accent: red
       toggle:
         icon: material/weather-night
-        name: Dark
-
-    # Tema claro opcional
-    - scheme: slate
+        name: Switch to light mode
+    - scheme: default
       toggle:
         icon: material/weather-sunny
-        name: Light
+        name: Switch to dark mode
+
+nav:
+  - Home: index.md
+  - Machines:
+    - Overview: machines/machines.md
+    - Hack The Box: machines/HTB/
+  - Research: research/research.md
