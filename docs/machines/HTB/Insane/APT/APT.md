@@ -1,4 +1,4 @@
-[Banner](img/APT_BANNER.png)
+![APT](img/APT_BANNER.png)
 
 # APT-WriteUp
 
