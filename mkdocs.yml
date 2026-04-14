@@ -16,6 +16,6 @@ theme:
 nav:
   - Home: index.md
   - Machines:
-    - Overview: machines/machines.md
+    - Overview: machines/index.md
     - Hack The Box: machines/HTB/
   - Research: research/research.md
