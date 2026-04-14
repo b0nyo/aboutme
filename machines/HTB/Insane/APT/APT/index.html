@@ -700,7 +700,7 @@
 
 
 
-<p><a href="../img/APT_BANNER.png">Banner</a></p>
+<p><img alt="APT" src="../img/APT_BANNER.png" /></p>
 <h1 id="apt-writeup">APT-WriteUp</h1>
 <p>In this Windows Active Directory machine rated <strong>Insane</strong>, we'll compromise a Domain Controller starting from what appears to be a minimal attack surface, only two TCP ports open. The key insight is that the firewall only filters IPv4, leaving IPv6 wide open. From there, we exploit a leaked NTDS backup, perform a hash spray, abuse Remote Registry access, and ultimately weaponize an NTLMv1 downgrade to achieve full domain compromise. You will learn how to:</p>
 <ul>
