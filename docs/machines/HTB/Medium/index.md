@@ -1,3 +1,2 @@
 # Medium Machines
-
-Coming Soon!!
+* [Delegate](./Delegate/Delegate.md)
