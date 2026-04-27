@@ -1,2 +1,2 @@
 # Hard Machines
-* [APT](./Redelegate/Redelegate.md)
+* [Redelegate](./Redelegate/Redelegate.md)
