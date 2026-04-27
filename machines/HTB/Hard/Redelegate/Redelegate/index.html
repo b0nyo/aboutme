@@ -806,7 +806,7 @@
 
 
 
-<p><img alt="Redelegate Banner" src="img/REDELEGATE_BANNER.png" /></p>
+<p><img alt="Redelegate Banner" src="../img/Redelegate_BANNER.png" /></p>
 <h1 id="redelegate-writeup">Redelegate — WriteUp</h1>
 <p>In this Windows Active Directory machine rated <strong>Hard</strong>, we compromise a Domain Controller by chaining several misconfigurations. Starting from anonymous FTP access, we extract a KeePass database, crack its master password, find domain credentials, and abuse a <code>ForceChangePassword</code> privilege to pivot users. From there, we leverage <code>SeEnableDelegationPrivilege</code> to configure <strong>Resource-Based Constrained Delegation (RBCD)</strong> on an existing machine account, ultimately performing an S4U2Proxy attack to impersonate the Domain Controller itself and dump the Administrator hash. You will learn how to:</p>
 <ul>
