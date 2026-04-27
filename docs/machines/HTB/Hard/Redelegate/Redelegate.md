@@ -1,4 +1,4 @@
-![Redelegate Banner](img/REDELEGATE_BANNER.png)
+![Redelegate Banner](img/Redelegate_BANNER.png)
 
 # Redelegate — WriteUp
 
