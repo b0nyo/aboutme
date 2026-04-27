@@ -1,3 +1,2 @@
 # Hard Machines
-
-Comming Soon!!
+* [APT](./Redelegate/Redelegate.md)
